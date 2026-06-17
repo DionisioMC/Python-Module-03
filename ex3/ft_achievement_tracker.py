@@ -22,10 +22,10 @@ def gen_player_achievements() -> None:
     print(f"Only Bob has: {achievements_set.intersection(bob)}")
     print(f"Only Charlie has: {achievements_set.intersection(charlie)}")
     print(f"Only Dylan has: {achievements_set.intersection(dylan)}\n")
-    print(f"Alice is missing: {achievements_set.difference(alice)}")
-    print(f"Bob is missing: {achievements_set.difference(bob)}")
-    print(f"Charlie is missing: {achievements_set.difference(charlie)}")
-    print(f"Dylan is missing: {achievements_set.difference(dylan)}")
+    print(f"Alice is missing: {achievements_set.difference(alice)}\n")
+    print(f"Bob is missing: {achievements_set.difference(bob)}\n")
+    print(f"Charlie is missing: {achievements_set.difference(charlie)}\n")
+    print(f"Dylan is missing: {achievements_set.difference(dylan)}\n")
 
 
 if __name__ == "__main__":

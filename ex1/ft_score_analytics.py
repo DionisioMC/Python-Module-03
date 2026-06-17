@@ -10,7 +10,7 @@ if __name__ == "__main__":
             print(f"Invalid parameter: '{arg}'")
     if len(args) == 0:
         print("No scores provided. Usage: "
-              "python3 ft_score_analytics.py <score1> <score2> ...")
+              "python3 ft_score_analytics.py <score1> <score2> ...\n")
     else:
         print("Scores processed: [", end="")
         i = 0

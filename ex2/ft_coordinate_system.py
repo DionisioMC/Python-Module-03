@@ -10,11 +10,12 @@ def get_player_pos() -> tuple[float, float, float]:
         raw_coord = raw.split(",")
         if raw == raw_coord[0]:
             print("Invalid syntax")
-        try:
-            for coord in raw_coord:
-                coords.append(float(coord.strip()))
-        except ValueError as e:
-            print(f"Error on parameter '{coord.strip()}': {e}")
+        else:
+            try:
+                for coord in raw_coord:
+                    coords.append(float(coord.strip()))
+            except ValueError as e:
+                print(f"Error on parameter '{coord.strip()}': {e}")
     return (coords[0], coords[1], coords[2])
 
 
