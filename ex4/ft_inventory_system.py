@@ -29,6 +29,8 @@ if __name__ == '__main__':
             elif minimum[1] > game_item[1]:
                 minimum = game_item
         print(f"Item most abundant: {maximum[0]} with quantity {maximum[1]}")
-        print(f"Item least abundant: {maximum[0]} with quantity {maximum[1]}")
+        print(f"Item least abundant: {minimum[0]} with quantity {minimum[1]}")
         items.update({"magic_item": 1})
         print(items)
+    else:
+        print("No items provided. Usage: python3 ft_inventory_systems.py <item1>:quantity <item2>:quantity ...")

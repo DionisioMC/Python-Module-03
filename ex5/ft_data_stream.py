@@ -2,7 +2,7 @@ import typing
 import random
 
 
-def gen_event() -> typing.Generator:
+def gen_event() -> typing.Generator[tuple[str, str], None, None]:
     players = ["alice", "bob", "charlie", "dylan"]
     actions = ["swim", "use", "move", "release",
                "run", "grab", "climb", "eat", "sleep"]
@@ -12,7 +12,7 @@ def gen_event() -> typing.Generator:
         yield (name, action)
 
 
-def consume_event(lst: list) -> typing.Generator:
+def consume_event(lst: list[tuple[str, str]]) -> typing.Generator[tuple[str, str], None, None]:
     while len(lst) > 0:
         event = random.choice(lst)
         lst.remove(event)
