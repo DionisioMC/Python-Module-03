@@ -12,8 +12,8 @@ if __name__ == "__main__":
     scores = {player: round(random.random() * 1000)
               for player in capitalized_list}
     print(f"Score dict: {scores}")
-    average = round(sum(scores.values()) / len(scores.values()), 2)
+    values = [scores[score] for score in scores]
+    average = round(sum(values) / len(values), 2)
     print(f"Score average is {average}")
-    high_scores = {player: score for player,
-                   score in scores.items() if score > average}
+    high_scores = {player: scores[player] for player in scores if scores[player] > average}
     print(f"High scores: {high_scores}")

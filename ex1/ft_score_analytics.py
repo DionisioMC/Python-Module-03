@@ -12,12 +12,7 @@ if __name__ == "__main__":
         print("No scores provided. Usage: "
               "python3 ft_score_analytics.py <score1> <score2> ...\n")
     else:
-        print("Scores processed: [", end="")
-        i = 0
-        while i < len(args) - 1:
-            print(f"{args[i]}, ", end="")
-            i += 1
-        print(f"{args[i]}]")
+        print(f"Scores processed: {args}")
         print(f"Total players: {len(args)}")
         print(f"Total score: {sum(args)}")
         print(f"Average score: {sum(args) / len(args)}")

@@ -1,19 +1,24 @@
 import random
 
 
-def gen_player_achievements() -> None:
+def gen_player_achievements(achievements: list[str]) -> set[str]:
+    return set(random.sample(achievements, k=random.randrange(6, 10)))
+
+
+if __name__ == "__main__":
     achievements = ['Crafting Genius', 'Strategist', 'World Savior',
                     'Speed Runner', 'Survivor', 'Master Explorer',
                     'Treasure Hunter', 'Unstoppable', 'First Steps',
                     'Collector Supreme', 'Untouchable', 'Sharp Mind',
                     'Boss Slayer']
-    alice = set(random.sample(achievements, k=6))
+    print("=== Achievement Tracker System ===\n")
+    alice = gen_player_achievements(achievements)
     print(f"Player Alice: '{alice}")
-    bob = set(random.sample(achievements, k=7))
+    bob = gen_player_achievements(achievements)
     print(f"Player Bob: '{bob}")
-    charlie = set(random.sample(achievements, k=9))
+    charlie = gen_player_achievements(achievements)
     print(f"Player Charlie: '{charlie}")
-    dylan = set(random.sample(achievements, k=5))
+    dylan = gen_player_achievements(achievements)
     print(f"Player Dylan: '{dylan}\n")
     achievements_set = set(achievements)
     print(f"All distinct achievements: {alice.union(bob, charlie, dylan)}\n")
@@ -26,7 +31,3 @@ def gen_player_achievements() -> None:
     print(f"Bob is missing: {achievements_set.difference(bob)}\n")
     print(f"Charlie is missing: {achievements_set.difference(charlie)}\n")
     print(f"Dylan is missing: {achievements_set.difference(dylan)}\n")
-
-
-if __name__ == "__main__":
-    gen_player_achievements()

@@ -12,7 +12,8 @@ def gen_event() -> typing.Generator[tuple[str, str], None, None]:
         yield (name, action)
 
 
-def consume_event(lst: list[tuple[str, str]]) -> typing.Generator[tuple[str, str], None, None]:
+def consume_event(lst: list[tuple[str, str]]
+                  ) -> typing.Generator[tuple[str, str], None, None]:
     while len(lst) > 0:
         event = random.choice(lst)
         lst.remove(event)
